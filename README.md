@@ -683,3 +683,31 @@ LinkedIn: https://www.linkedin.com/in/anderson-edaiyo-bab74117b
 
 
 
+
+
+
+
+
+## 📊 Project Information Matrix
+
+> **Note:**  
+> This repository contains the complete documentation, environment blueprints, and live verification logs for my Week 02 specialized laboratory deployment focusing on active network scanning, host discovery, and topology mapping.
+
+| 🗂️ Project Parameter | ⚙️ Live Deployment Data |
+| :--- | :--- |
+| **Program Track** | Cybersecurity with Ethical Hacking |
+| **Academy Module** | Networkwalks Academy Portfolio Matrix |
+| **Timeline Horizon** | Week 02 Engineering Core |
+| **Project Identity** | Network Scanning with Zenmap |
+| **Target Task ID** | TASK W2-PM5 |
+| **Code Repository** | Public Deployment Hub via GitHub |
+
+
+
+
+
+
+
+
+
+
