@@ -402,7 +402,6 @@ flowchart TD
 
 
 
-<img width="1366" height="768" alt="9_Zenmap topology 2" src="https://github.com/user-attachments/assets/faeeac6c-76a7-4be4-bc06-58a840684116" />
 
 
 
@@ -413,7 +412,7 @@ flowchart TD
 
 
 
-
+<img width="1366" height="765" alt="9_Zenmap topology 2" src="https://github.com/user-attachments/assets/6a3ccfcc-af92-4956-9a1f-80bbdb7c86f2" />
 
 
 
