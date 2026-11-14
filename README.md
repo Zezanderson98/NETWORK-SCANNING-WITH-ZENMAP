@@ -26,5 +26,224 @@
 
 
 
+---
+
+## 📋 Project Overview
+**Zenmap** is the official cross-platform Graphical User Interface (GUI) for **Nmap (Network Mapper)**, widely used by cybersecurity professionals, network administrators, and ethical hackers for network discovery and security auditing.
+
+In this lab (**Week 2 | Project Module 5**), active network scanning was performed on a Windows workstation to inspect local interface settings (`ipconfig`), discover responsive devices across the **`192.168.0.0/24`** LAN subnet using ICMP/ARP ping sweeps (`nmap -sn`), enumerate IPv4 and hardware MAC addresses, and export a visual network topology map in PDF format.
+
+---
+
+## 🎯 Objectives
+* **Install & Configure Zenmap:** Deploy Zenmap alongside the Npcap packet-capture driver on Windows to enable active network probing.
+* **Identify Local Network Boundaries:** Inspect host network adapters via `ipconfig` to determine the local IPv4 address (`192.168.0.2`), subnet mask (`255.255.255.0`), and target CIDR range (`192.168.0.0/24`).
+* **Enumerate Active Endpoints:** Execute a subnet-wide **Ping Scan** (`nmap -sn 192.168.0.0/24`) to identify live hosts, count active devices, and resolve hardware MAC addresses and vendor OUIs.
+* **Visualize & Export Network Topology:** Generate a graphical network topology map with the legend enabled and export the output as a PDF report.
+
+---
+
+## 💡 Purpose of the Lab
+The purpose of this laboratory is to practice the **active scanning and network discovery phase** of a penetration testing engagement. After gathering external intelligence during reconnaissance, an analyst maps internal or local network segments to identify live endpoints, verify gateway routing, detect unauthorized or rogue devices, and document network communication paths before conducting port or vulnerability assessments.
+
+---
+
+## 🏗️ Lab Architecture & Network Topology
+The scan was executed from a **Windows Host Workstation** connected via Wi-Fi to a **ZTE Wireless Router / Gateway** on the `192.168.0.0/24` subnet:
+
+```mermaid
+flowchart TD
+    Gateway["**ZTE MiFi Router / Gateway**<br/>IPv4: 192.168.0.1<br/>MAC: 5C:4D:BF:D4:E6:62<br/>Role: Default Gateway & DHCP Server"]
+    
+    Host["**Windows Host Workstation**<br/>IPv4: 192.168.0.2 - Subnet: 255.255.255.0<br/>Scanner: Zenmap - Nmap GUI<br/>Command: nmap -sn 192.168.0.0/24"]
+    
+    PDF["**Topology & Audit Output**<br/>2 Live Hosts Discovered on Local Subnet<br/>Exported to Desktop as PDF"]
+
+    Host <-->|"ICMP & ARP Ping Sweep - 192.168.0.0/24"| Gateway
+    Host -->|"Generates Visual Map & Legend"| PDF
+
+    style Gateway fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#f8fafc
+    style Host fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style PDF fill:#334155,stroke:#94a3b8,stroke-width:2px,color:#f8fafc
+```
+
+### Architecture Breakdown
+* **Scanning Workstation (`192.168.0.2`):** Windows PC running **Zenmap** as Administrator with **Npcap** to send ICMP echo and ARP discovery probes across all 256 addresses in `192.168.0.0/24`.
+* **Gateway Device (`192.168.0.1`):** ZTE MiFi router acting as the default gateway and DHCP server, responding to discovery probes with its hardware MAC identifier (`5C:4D:BF:D4:E6:62`).
+* **Local Subnet Scope:** The scan mapped the active devices directly reachable on the `192.168.0.0/24` wireless subnet, identifying 2 responsive endpoints.
+
+
+---
+
+
+## 🛠️ Lab Tasks & Execution (Step-by-Step)
+
+### Task 1: Download & Install Zenmap on Windows PC
+* **Objective:** Install Zenmap (the official Nmap GUI) along with the required packet capture driver on the Windows workstation.
+* **Action Taken:** Downloaded the official Windows setup executable from [nmap.org/download.html](https://nmap.org), ran the installer as Administrator, accepted the license agreement, and installed both **Zenmap (GUI Frontend)** and **Npcap**.
+
+
+<img width="1358" height="768" alt="1_Nmap download" src="https://github.com/user-attachments/assets/f6e88323-9da7-4371-8626-
+6adfbfaca62d" />
+
+<img width="1366" height="768" alt="2_nmap file setup" src="https://github.com/user-attachments/assets/4a463011-6bac-4224-b3f8-3ab7f0b51bcd" />
+
+<img width="1365" height="768" alt="3_nmap choose components" src="https://github.com/user-attachments/assets/0812ad05-c34f-4b19-bf8f-ab7e2ba02947" />
+
+
+<img width="1361" height="768" alt="4_nmap choose install location" src="https://github.com/user-attachments/assets/c22b7932-2123-438c-b83e-60325a81baeb" />
+
+<img width="1366" height="764" alt="5_npcap click install" src="https://github.com/user-attachments/assets/3bf4579e-19ce-4997-a5db-76a950b49810" />
+
+<img width="1366" height="768" alt="6_zenmap click on finish and open" src="https://github.com/user-attachments/assets/30741be4-b8ff-4c87-adf2-441286759385" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+### Task 2: Find Local IP Address & LAN Subnet
+* **Objective:** Determine the workstation's active IPv4 address, subnet mask, and target CIDR network range.
+* **Command Executed:**
+  ```cmd
+  ipconfig
+  ```
+* **Findings:**
+  * **Local IPv4 Address:** `192.168.0.2`
+  * **Subnet Mask:** `255.255.255.0` (`/24`)
+  * **Default Gateway:** `192.168.0.1`
+  * **LAN Subnet:** `192.168.0.0/24`
+
+
+
+
+<img width="1366" height="767" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/865d7b8a-17b8-4cdf-a3ed-e888739e9386" />
+
+
+
+
+
+
+
+---
+
+### Task 3: Find the List of Live Hosts/PCs in the IP Subnet
+* **Objective:** Perform an active host discovery sweep across the local subnet to enumerate responsive devices.
+* **Action & Command Executed:** Launched **Zenmap** as Administrator, entered `192.168.0.0/24` in the **Target** field, selected the **Ping scan** profile, and clicked **Scan**:
+  ```bash
+  nmap -sn 192.168.0.0/24
+  ```
+* **Live Hosts Discovered:**
+  * `192.168.0.1` — Default Gateway / ZTE Wireless Router
+  * `192.168.0.2` — Local Windows Host Workstation
+
+
+
+<img width="1366" height="742" alt="8_Zenmap scan" src="https://github.com/user-attachments/assets/df4fafd3-c26e-404b-a392-bd2820ebc80a" />
+
+
+
+
+
+
+
+---
+
+### Task 4: Count the Number of Live Hosts in the Subnet
+* **Objective:** Identify the total number of active devices responding within the scanned `/24` range.
+* **Answer:** **2 live hosts** are active on the subnet (`256 IP addresses scanned`).
+
+---
+
+### Task 5: Identify the IP Addresses of the Live Hosts
+* **Objective:** List the exact IPv4 addresses of every active endpoint discovered during the scan.
+* **Answer:**
+  * `192.168.0.1`
+  * `192.168.0.2`
+
+---
+
+### Task 6: Identify the MAC Addresses of the Live Hosts
+* **Objective:** Record the hardware Media Access Control (MAC) address and vendor OUI for each discovered host.
+* **Answer:**
+  * **`192.168.0.1` (Gateway / Router):** `5C:4D:BF:D4:E6:62` *(ZTE Corporation)*
+  * **`192.168.0.2` (Local Windows PC):** Verified via `ipconfig /all` under **Wireless LAN adapter Wi-Fi** *(Physical Address)*
+
+---
+
+### Task 7: Display & Save the Output Topology in PDF Format
+* **Objective:** Generate a visual network map with the legend enabled and export it to the Desktop as a PDF document.
+* **Action Taken:** Switched to the **Topology** tab in Zenmap, toggled **Legend** on to review host and connection indicators, clicked **Save Graphic**, selected **PDF (`*.pdf`)** as the file format, and saved `network_topology.pdf` to the Desktop.
+
+
+
+
+
+
+<img width="1366" height="768" alt="9_Zenmap topology 2" src="https://github.com/user-attachments/assets/faeeac6c-76a7-4be4-bc06-58a840684116" />
+
+
+
+<img width="1366" height="768" alt="10_Zenmap topology 1" src="https://github.com/user-attachments/assets/14606374-06c0-453a-931c-777c0b2ffac0" />
+
+
+
+
+
+---
+## 💡 Key Takeaways & Defensive Insights
+* **Rapid Asset Inventory:** Even a lightweight, non-intrusive ping sweep (`nmap -sn`) quickly maps active devices, response latency, and hardware vendors via MAC OUI resolution.
+* **Subnet Visibility:** Scanning the local `192.168.0.0/24` range confirmed the active gateway (`192.168.0.1`) and local scanning workstation (`192.168.0.2`) as the two responsive hosts on the network.
+* **Defensive Recommendations:**
+  * Conduct periodic internal Nmap sweeps to inventory connected endpoints and detect unauthorized or rogue MAC addresses on the LAN.
+  * Configure host-based firewalls to restrict unnecessary ICMP echo replies on sensitive internal endpoints.
+
+
+---
+## 📂 Repository Structure
+```text
+├── README.md
+├── network_topology.pdf
+└── screenshots/
+    ├── 1_Nmap download.png
+    ├── 2_nmap file setup.png
+    ├── 3_nmap choose components.png
+    ├── 4_nmap choose install location.png
+    ├── 5_npcap click install.png
+    ├── 6_zenmap click on finish and open.png
+    ├── 7_Open CMD & run ipconfig.png
+    ├── 8_Zenmap scan.png
+    ├── 9_Zenmap topology 2.png
+    └── 10_Zenmap topology 1.png
+```
+
+
+
+
+---
+
+## 🔐 Security & Ethical Use
+This laboratory and repository are intended strictly for educational and authorized research purposes only. All network scanning activities were conducted within the authorized [NetworkWalks](https://networkwalks.com) lab scope and on personally owned local network devices. Unauthorized scanning or exploitation of external systems is illegal.
+
+## 🔗 Tools & Resources
+* **Primary Environment:** Windows Host Workstation ([NetworkWalks](https://networkwalks.com) Week 2 | Project Module 5)
+* **Scanning & Enumeration Suite:** [Nmap / Zenmap GUI](https://nmap.org), Windows Command Prompt (`ipconfig`)
+* **Official Documentation:** [Nmap Reference Guide](https://nmap.org) | [Zenmap User's Guide](https://nmap.org)
+
+## 👤 Author
+**Anderson Edaiyo Uzezi**  
+Cybersecurity Professional B084  
+LinkedIn: https://linkedin.com
+
+
 
 
