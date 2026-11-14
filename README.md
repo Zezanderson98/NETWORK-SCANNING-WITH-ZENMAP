@@ -257,10 +257,48 @@ flowchart TD
 
 
 
+### Task 2: Find Local IP Address & LAN Subnet
+* **Objective:** Determine the workstation's active IPv4 address, subnet mask, and target LAN subnet in CIDR notation.
+* **Commands Executed:**
+  First, `ipconfig` was executed in Windows Command Prompt to view the wireless adapter's IPv4 address (`192.168.0.2`) and subnet mask (`255.255.255.0`). Because `ipconfig` displays the subnet mask rather than the CIDR subnet prefix directly, `netsh` was run to cleanly isolate the `"Wi-Fi"` interface configuration and display the exact LAN subnet prefix:
+ 
+ 
+ ```cmd
+  ipconfig
+### Observed `ipconfig` Output (`Wireless LAN adapter Wi-Fi`)
+* **Connection-specific DNS Suffix:** *(blank)*
+* **Link-local IPv6 Address:** `fe80::3235:3894:facd:b71b%8`
+* **IPv4 Address:** `192.168.0.2`
+* **Subnet Mask:** `255.255.255.0`
+* **Default Gateway:** `192.168.0.1`
+
+
+<img width="1352" height="765" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/f0c5fea4-bb2f-476b-ba77-f261f916cece" />
 
 
 
 
+ 
+ 
+ ```cmd
+  netsh interface ip show addresses "Wi-Fi"
+  ```
+* **Observed Output & Findings (`Configuration for interface "Wi-Fi"`):**
+  * **DHCP Enabled:** `Yes`
+  * **IP Address (Local IPv4):** `192.168.0.2`
+  * **Subnet Prefix / LAN Subnet:** `192.168.0.0/24` (`mask 255.255.255.0`)
+  * **Default Gateway:** `192.168.0.1`
+  * **Gateway Metric / InterfaceMetric:** `0` / `50`
+
+
+
+(Note: As shown in the screenshot, ipconfig also listed several disconnected virtual and secondary adapters—Local Area Connection, OpenVPN Connect DCO Adapter, Local Area Connection* 1, Local Area Connection* 2, and Bluetooth Network Connection—and displayed the Subnet Mask rather than the CIDR subnet prefix, which is why netsh interface ip show addresses "Wi-Fi" was used right after to display Subnet Prefix: 192.168.0.0/24.)
+
+
+
+
+
+<img width="1366" height="768" alt="subnet prefix" src="https://github.com/user-attachments/assets/426a8f78-f6d2-44d8-b7b3-8012e7081dba" />
 
 
 
