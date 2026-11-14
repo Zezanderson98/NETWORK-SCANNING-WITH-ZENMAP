@@ -544,7 +544,7 @@ flowchart TD
     └── 11_Zenmap quiz.png
 ```
 
-```
+
 
 
 
@@ -615,15 +615,65 @@ After completing all practical scanning and topology export tasks, the official 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ## 🔐 Security & Ethical Use
 This laboratory and repository are intended strictly for educational and authorized research purposes only. All network scanning activities were conducted within the authorized [NetworkWalks](https://networkwalks.com) lab scope and on personally owned local network devices. Unauthorized scanning or exploitation of external systems is illegal.
 
+
+
+
+
+
+
+
+
 ## 🔗 Tools & Resources
 * **Primary Environment:** Windows Host Workstation ([NetworkWalks](https://networkwalks.com) Week 2 | Project Module 5)
 * **Scanning & Enumeration Suite:** [Nmap / Zenmap GUI](https://nmap.org), Windows Command Prompt (`ipconfig`)
 * **Official Documentation:** [Nmap Reference Guide](https://nmap.org) | [Zenmap User's Guide](https://nmap.org)
+
+
+
+
+
+
+
+
+
+
 
 ## 👤 Author
 **Anderson Edaiyo Uzezi**  
