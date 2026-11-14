@@ -369,7 +369,7 @@ flowchart TD
 
 ### Task 7: Display & Save the Output Topology in PDF Format
 * **Objective:** Generate a visual network map with the legend enabled and export it to the Desktop as a PDF document.
-* **Action Taken:** Switched to the **Topology** tab in Zenmap, toggled **Legend** on to review host and connection indicators, clicked **Save Graphic**, selected **PDF (`*.pdf`)** as the file format, and saved `network_topology.pdf` to the Desktop.
+* **Action Taken:** Switched to the **Topology** tab in Zenmap, toggled **Legend** on to review host and connection indicators, clicked **Save Graphic**, selected **PDF (`*.pdf`)** as the file format, and saved `Zenmap1.pdf` to the Desktop.
 
 
 
