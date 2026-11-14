@@ -487,6 +487,7 @@ flowchart TD
 
 
 ---
+
 ## 📂 Repository Structure
 ```text
 ├── README.md
@@ -499,10 +500,13 @@ flowchart TD
     ├── 5_npcap click install.png
     ├── 6_zenmap click on finish and open.png
     ├── 7_Open CMD & run ipconfig.png
+    ├── 7b_Subnet prefix via netsh.png
     ├── 8_Zenmap scan.png
     ├── 9_Zenmap topology 1.png
     ├── 10_Zenmap topology 2.png
     └── 11_Zenmap quiz.png
+```
+
 ```
 
 
@@ -534,7 +538,7 @@ This laboratory and repository are intended strictly for educational and authori
 ## 👤 Author
 **Anderson Edaiyo Uzezi**  
 Cybersecurity Professional B084  
-LinkedIn: https://linkedin.com
+LinkedIn: https://www.linkedin.com/in/anderson-edaiyo-bab74117b
 
 
 
