@@ -87,14 +87,123 @@ flowchart TD
 <img width="1358" height="768" alt="1_Nmap download" src="https://github.com/user-attachments/assets/f6e88323-9da7-4371-8626-
 6adfbfaca62d" />
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1366" height="768" alt="2_nmap file setup" src="https://github.com/user-attachments/assets/4a463011-6bac-4224-b3f8-3ab7f0b51bcd" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <img width="1365" height="768" alt="3_nmap choose components" src="https://github.com/user-attachments/assets/0812ad05-c34f-4b19-bf8f-ab7e2ba02947" />
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1361" height="768" alt="4_nmap choose install location" src="https://github.com/user-attachments/assets/c22b7932-2123-438c-b83e-60325a81baeb" />
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1366" height="764" alt="5_npcap click install" src="https://github.com/user-attachments/assets/3bf4579e-19ce-4997-a5db-76a950b49810" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <img width="1366" height="768" alt="6_zenmap click on finish and open" src="https://github.com/user-attachments/assets/30741be4-b8ff-4c87-adf2-441286759385" />
 
@@ -127,7 +236,35 @@ flowchart TD
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1366" height="767" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/865d7b8a-17b8-4cdf-a3ed-e888739e9386" />
+
+
+
+
+
+
+
 
 
 
@@ -149,7 +286,47 @@ flowchart TD
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1366" height="742" alt="8_Zenmap scan" src="https://github.com/user-attachments/assets/df4fafd3-c26e-404b-a392-bd2820ebc80a" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,7 +367,64 @@ flowchart TD
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1366" height="768" alt="9_Zenmap topology 2" src="https://github.com/user-attachments/assets/faeeac6c-76a7-4be4-bc06-58a840684116" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
