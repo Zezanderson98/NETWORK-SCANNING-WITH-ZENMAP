@@ -264,8 +264,10 @@ flowchart TD
  
  
  ```cmd
-  ipconfig
-### Observed `ipconfig` Output (`Wireless LAN adapter Wi-Fi`)
+
+
+ipconfig
+**Observed `ipconfig` Output (`Wireless LAN adapter Wi-Fi`)**
 * **Connection-specific DNS Suffix:** *(blank)*
 * **Link-local IPv6 Address:** `fe80::3235:3894:facd:b71b%8`
 * **IPv4 Address:** `192.168.0.2`
@@ -273,7 +275,7 @@ flowchart TD
 * **Default Gateway:** `192.168.0.1`
 
 
-<img width="1352" height="765" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/a7320deb-d615-42b8-abc5-8f6f4ae7d9cb" />
+<img width="1352" height="765" alt="7_Open CMD run ipconfig" src="https://github.com/user-attachments/assets/a7320deb-d615-42b8-abc5-8f6f4ae7d9cb" />
 
 
 
