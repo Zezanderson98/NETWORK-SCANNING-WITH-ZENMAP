@@ -273,7 +273,13 @@ flowchart TD
 * **Default Gateway:** `192.168.0.1`
 
 
-<img width="1352" height="765" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/f0c5fea4-bb2f-476b-ba77-f261f916cece" />
+<img width="1352" height="765" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/a7320deb-d615-42b8-abc5-8f6f4ae7d9cb" />
+
+
+
+
+
+
 
 
 
@@ -302,9 +308,6 @@ flowchart TD
 
 
 
-> **🛠️ Troubleshooting Note (Virtual Adapter Clutter & CIDR Prefix):**
-> * **Problem Encountered:** Running `ipconfig` displayed numerous disconnected virtual adapters (`vEthernet (WSL)`, `VirtualBox Host-Only`, `OpenVPN`) alongside the physical Wi-Fi adapter, and displayed the decimal subnet mask (`255.255.255.0`) instead of the CIDR network prefix required by Zenmap.
-> * **Solution Applied:** Executed `netsh interface ip show addresses "Wi-Fi"` to isolate the active wireless interface and directly retrieve the exact CIDR subnet prefix (`192.168.0.0/24`).
 
 
 
