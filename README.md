@@ -226,17 +226,7 @@ flowchart TD
 
 ---
 
-### Task 2: Find Local IP Address & LAN Subnet
-* **Objective:** Determine the workstation's active IPv4 address, subnet mask, and target CIDR network range.
-* **Command Executed:**
-  ```cmd
-  ipconfig
-  ```
-* **Findings:**
-  * **Local IPv4 Address:** `192.168.0.2`
-  * **Subnet Mask:** `255.255.255.0` (`/24`)
-  * **Default Gateway:** `192.168.0.1`
-  * **LAN Subnet:** `192.168.0.0/24`
+
 
 
 
