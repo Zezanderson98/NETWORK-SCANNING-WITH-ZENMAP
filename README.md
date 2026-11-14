@@ -93,8 +93,7 @@ flowchart TD
 
 
 
-<img width="1358" height="768" alt="1_Nmap download" src="https://github.com/user-attachments/assets/f6e88323-9da7-4371-8626-
-6adfbfaca62d" />
+<img width="1366" height="768" alt="2_nmap file setup" src="https://github.com/user-attachments/assets/b7acc590-3208-4e77-9a14-097ed2c55a4e" />
 
 
 
@@ -113,9 +112,6 @@ flowchart TD
 
 
 
-
-
-<img width="1366" height="768" alt="2_nmap file setup" src="https://github.com/user-attachments/assets/4a463011-6bac-4224-b3f8-3ab7f0b51bcd" />
 
 
 
