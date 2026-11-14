@@ -4,7 +4,7 @@
 
 <div align="center">
 
-#  🛡️ Penetration Testing Lab: Active Network Scanning
+#  🛡️ Penetration Testing Lab: Active Network Scanning with Zenmap
 
 **Subnet Mapping, Endpoint Enumeration & Topology Visualization with Zenmap**
 </div>
