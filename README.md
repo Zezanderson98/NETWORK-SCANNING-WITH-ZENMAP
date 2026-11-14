@@ -263,11 +263,11 @@ flowchart TD
   First, `ipconfig` was executed in Windows Command Prompt to view the wireless adapter's IPv4 address (`192.168.0.2`) and subnet mask (`255.255.255.0`). Because `ipconfig` displays the subnet mask rather than the CIDR subnet prefix directly, `netsh` was run to cleanly isolate the `"Wi-Fi"` interface configuration and display the exact LAN subnet prefix:
  
  
+ 
  ```cmd
-
-
-ipconfig
-**Observed `ipconfig` Output (`Wireless LAN adapter Wi-Fi`)**
+  ipconfig
+```
+* **Observed `ipconfig` Output (`Wireless LAN adapter Wi-Fi`)**
 * **Connection-specific DNS Suffix:** *(blank)*
 * **Link-local IPv6 Address:** `fe80::3235:3894:facd:b71b%8`
 * **IPv4 Address:** `192.168.0.2`
@@ -275,7 +275,36 @@ ipconfig
 * **Default Gateway:** `192.168.0.1`
 
 
-<img width="1352" height="765" alt="7_Open CMD run ipconfig" src="https://github.com/user-attachments/assets/a7320deb-d615-42b8-abc5-8f6f4ae7d9cb" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1352" height="765" alt="7_Open cmd   run ipconfig" src="https://github.com/user-attachments/assets/38532865-c5ca-4a66-b2e9-4d5faca75450" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
