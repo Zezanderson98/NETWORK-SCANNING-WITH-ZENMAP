@@ -262,7 +262,7 @@ flowchart TD
 
 
 
-<img width="1366" height="767" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/865d7b8a-17b8-4cdf-a3ed-e888739e9386" />
+<img width="1352" height="765" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/8bf1f4ef-d1ea-4b85-a1d6-6b68532405d0" />
 
 
 
