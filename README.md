@@ -372,6 +372,20 @@ flowchart TD
 
 
 
+<img width="1366" height="765" alt="9_Zenmap topology 1" src="https://github.com/user-attachments/assets/490e05a9-937f-4bbf-ad17-af2906d1965d" />
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1366" height="768" alt="10_Zenmap topology 2" src="https://github.com/user-attachments/assets/684002ff-d89a-4069-9759-52c8cad5d85a" />
 
 
 
@@ -412,7 +426,6 @@ flowchart TD
 
 
 
-<img width="1366" height="765" alt="9_Zenmap topology 2" src="https://github.com/user-attachments/assets/6a3ccfcc-af92-4956-9a1f-80bbdb7c86f2" />
 
 
 
@@ -431,8 +444,6 @@ flowchart TD
 
 
 
-
-<img width="1366" height="768" alt="10_Zenmap topology 1" src="https://github.com/user-attachments/assets/14606374-06c0-453a-931c-777c0b2ffac0" />
 
 
 
@@ -461,8 +472,8 @@ flowchart TD
     ├── 6_zenmap click on finish and open.png
     ├── 7_Open CMD & run ipconfig.png
     ├── 8_Zenmap scan.png
-    ├── 9_Zenmap topology 2.png
-    ├── 10_Zenmap topology 1.png
+    ├── 9_Zenmap topology 1.png
+    ├── 10_Zenmap topology 2.png
     └── 11_Zenmap quiz.png
 ```
 
