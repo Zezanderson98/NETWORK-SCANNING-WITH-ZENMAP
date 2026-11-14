@@ -300,7 +300,7 @@ flowchart TD
 
 
 
-
+(Note: As shown in the screenshot, ipconfig also listed several disconnected virtual and secondary adapters—Local Area Connection, OpenVPN Connect DCO Adapter, Local Area Connection* 1, Local Area Connection* 2, and Bluetooth Network Connection—and displayed the Subnet Mask rather than the CIDR subnet prefix, which is why netsh interface ip show addresses "Wi-Fi" was used right after to display Subnet Prefix: 192.168.0.0/24.)
 
 
 
@@ -329,7 +329,7 @@ flowchart TD
 
 
 
-(Note: As shown in the screenshot, ipconfig also listed several disconnected virtual and secondary adapters—Local Area Connection, OpenVPN Connect DCO Adapter, Local Area Connection* 1, Local Area Connection* 2, and Bluetooth Network Connection—and displayed the Subnet Mask rather than the CIDR subnet prefix, which is why netsh interface ip show addresses "Wi-Fi" was used right after to display Subnet Prefix: 192.168.0.0/24.)
+
 
 
 
@@ -560,6 +560,21 @@ After completing all practical scanning and topology export tasks, the official 
 
 ### Quiz Completion Proof
 <img width="1366" height="763" alt="11_Zenmap quiz" src="https://github.com/user-attachments/assets/19a02a1c-9723-459d-baaa-cf08c3fd4963" />
+
+
+## 🛠️ Problem Encountered & Solutions
+
+* **Problem Encountered (Virtual Adapter Clutter & CIDR Prefix):** Running `ipconfig` displayed numerous disconnected virtual adapters (`vEthernet (WSL)`, `VirtualBox Host-Only`, and `OpenVPN`) alongside the physical Wi-Fi adapter, and displayed the decimal subnet mask (`255.255.255.0`) rather than the CIDR network prefix required by Zenmap.
+* **Solution Applied:** Executed `netsh interface ip show addresses "Wi-Fi"` in Command Prompt to isolate the active wireless interface and directly retrieve the exact CIDR subnet prefix (`192.168.0.0/24`).
+
+
+<img width="1366" height="768" alt="ipconfig" src="https://github.com/user-attachments/assets/f33028d4-dda6-4342-921e-3a4545f13e2c" />
+
+
+<img width="1366" height="768" alt="7b_subnet prefix via netsh" src="https://github.com/user-attachments/assets/99c31373-670a-40b6-9cb6-72beb76a9a5d" />
+
+
+
 
 
 
