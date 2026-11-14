@@ -84,6 +84,15 @@ flowchart TD
 * **Action Taken:** Downloaded the official Windows setup executable from [nmap.org/download.html](https://nmap.org), ran the installer as Administrator, accepted the license agreement, and installed both **Zenmap (GUI Frontend)** and **Npcap**.
 
 
+
+<img width="1358" height="768" alt="1_Nmap download" src="https://github.com/user-attachments/assets/2e3eafda-fa48-4ac3-82ad-2df6d10806a5" />
+
+
+
+
+
+
+
 <img width="1358" height="768" alt="1_Nmap download" src="https://github.com/user-attachments/assets/f6e88323-9da7-4371-8626-
 6adfbfaca62d" />
 
