@@ -302,6 +302,9 @@ flowchart TD
 
 
 
+> **🛠️ Troubleshooting Note (Virtual Adapter Clutter & CIDR Prefix):**
+> * **Problem Encountered:** Running `ipconfig` displayed numerous disconnected virtual adapters (`vEthernet (WSL)`, `VirtualBox Host-Only`, `OpenVPN`) alongside the physical Wi-Fi adapter, and displayed the decimal subnet mask (`255.255.255.0`) instead of the CIDR network prefix required by Zenmap.
+> * **Solution Applied:** Executed `netsh interface ip show addresses "Wi-Fi"` to isolate the active wireless interface and directly retrieve the exact CIDR subnet prefix (`192.168.0.0/24`).
 
 
 
@@ -523,6 +526,9 @@ After completing all practical scanning and topology export tasks, the official 
 
 ### Quiz Completion Proof
 <img width="1366" height="763" alt="11_Zenmap quiz" src="https://github.com/user-attachments/assets/19a02a1c-9723-459d-baaa-cf08c3fd4963" />
+
+
+
 
 
 ---
