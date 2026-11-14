@@ -59,13 +59,14 @@ flowchart TD
     
     PDF["**Topology & Audit Output**<br/>2 Live Hosts Discovered on Local Subnet<br/>Exported to Desktop as PDF"]
 
-    Host <-->|"ICMP & ARP Ping Sweep - 192.168.0.0/24"| Gateway
+    Host <-->|"Ping Scan - 192.168.0.0/24"| Gateway
     Host -->|"Generates Visual Map & Legend"| PDF
 
     style Gateway fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#f8fafc
     style Host fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
     style PDF fill:#334155,stroke:#94a3b8,stroke-width:2px,color:#f8fafc
 ```
+
 
 ### Architecture Breakdown
 * **Scanning Workstation (`192.168.0.2`):** Windows PC running **Zenmap** as Administrator with **Npcap** to send ICMP echo and ARP discovery probes across all 256 addresses in `192.168.0.0/24`.
