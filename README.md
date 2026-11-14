@@ -458,10 +458,24 @@ flowchart TD
     ├── 7_Open CMD & run ipconfig.png
     ├── 8_Zenmap scan.png
     ├── 9_Zenmap topology 2.png
-    └── 10_Zenmap topology 1.png
+    ├── 10_Zenmap topology 1.png
+    └── 11_Zenmap quiz.png
 ```
 
 
+
+---
+
+## 🏆 Lab Assessment & Quiz Verification
+After completing all practical scanning and topology export tasks, the official **NetworkWalks Zenmap Network Scanning (Practice Lab)** assessment was completed with a perfect score.
+
+* **Assessment Name:** Zenmap Network Scanning (Practice Lab)
+* **Platform:** [NetworkWalks Academy](https://networkwalks.com/zenmap-network-scanning-practice-lab/)
+* **Score Achieved:** **100%**
+* **Status:** Completed & Verified
+
+### Quiz Completion Proof
+<img width="1366" height="763" alt="11_Zenmap quiz" src="https://github.com/user-attachments/assets/19a02a1c-9723-459d-baaa-cf08c3fd4963" />
 
 
 ---
