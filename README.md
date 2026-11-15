@@ -436,7 +436,7 @@ flowchart TD
 
 
 
-<img width="1366" height="765" alt="9_Zenmap topology 1" src="https://github.com/user-attachments/assets/490e05a9-937f-4bbf-ad17-af2906d1965d" />
+<img width="1361" height="768" alt="9_Zenmap topology 1" src="https://github.com/user-attachments/assets/39f9b363-170e-410d-86e4-f14bbb9806f3" />
 
 
 
