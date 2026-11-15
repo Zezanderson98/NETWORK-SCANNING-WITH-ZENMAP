@@ -252,7 +252,6 @@ flowchart TD
 
 
 
-<img width="1352" height="765" alt="7_Open CMD   run ipconfig" src="https://github.com/user-attachments/assets/8bf1f4ef-d1ea-4b85-a1d6-6b68532405d0" />
 
 
 
